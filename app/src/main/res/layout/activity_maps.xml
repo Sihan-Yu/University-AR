@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment">
+
+            <Button
+                android:text="@string/go_here_from_current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ButtonGoHereFromCurrentLocation"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:onClick="onButtonGoHereFromCurrentLocationClick"
+                android:layout_gravity="end|top"
+                android:visibility="gone" />
+
+            <Button
+                android:text="@string/delete_route"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ButtonDeleteRoute"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:onClick="onButtonDeleteRouteClick"
+                android:layout_gravity="start|top"
+                android:visibility="gone" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/screen">
+
+    <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/mainmenuButton"
+                android:background="@drawable/oval"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:onClick="onButtonSetVisibility"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fog"
+    android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ARButton"
+                    android:background="@drawable/oval"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/camera"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/chatbotButton"
+                    android:background="@drawable/oval"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chatbot"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+        </fragment>
+
+</LinearLayout>
+<!-- android:visibility="gone" -->
